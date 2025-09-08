@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/contact", form);
+      const res = await axios.post("https://eflex-backend.vercel.app/contact", form);
       if (res.data.success) {
         Swal.fire({
           icon: "success",
