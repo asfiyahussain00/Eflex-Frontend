@@ -498,6 +498,7 @@
   .review-header div {
     margin-top: 8px;
   }
+
   .stat-card{
     margin: auto;
   }
@@ -552,5 +553,13 @@
   }
   .about-content h2::after{
     display: none;
-  }
+  
+}}
+
+.portfolio-page {
+  min-height: 80vh; 
+  padding: 50px 20px;
+  text-align: center;
+  color:  #0056b3;
+
 }

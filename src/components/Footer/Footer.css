@@ -162,6 +162,87 @@
   @keyframes underlineMobile {
     from { width: 30%; }
     to { width: 80%; }
+<<<<<<< HEAD
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 15px;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+
+  .newsletter input,
+  .newsletter button {
+    width: 85%;
+  }
+
+  .footer-title::after {
+    width: 40%;
+    animation: underlineMobileSmall 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes underlineMobileSmall {
+    from { width: 35%; }
+    to { width: 90%; }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .about-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 90%;
+    min-width: unset; 
+    padding: 1rem;
+  }
+
+  .counter {
+    font-size: 1.6rem; 
+  }
+
+  .stat-card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .about-stats {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 100%;              
+    min-width: unset;        
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .counter {
+    font-size: 1.8rem;       
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
+=======
+>>>>>>> 384ab72 (Added Portfolio page and updated Navbar, Footer, and Home)
   }
 }
 

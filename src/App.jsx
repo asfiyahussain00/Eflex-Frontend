@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import TeamPage from "./pages/TeamPage";
+import Portfolio from "./pages/portfolio";   
 
 import GraphicDesign from "./pages/Services/GraphicDesign";
 import DigitalMarketing from "./pages/Services/DigitalMarketing";
@@ -13,7 +14,7 @@ import DomainHosting from "./pages/Services/DomainHosting";
 import SEOService from "./pages/Services/SEOService";
 import BlogPage from "./pages/BlogPage";
 
-import './App.css'
+import './App.css';
 
 export default function App() {
   return (
@@ -27,8 +28,8 @@ export default function App() {
         <Route path="/TeamPage" element={<TeamPage />} /> 
 
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />  {/* ✅ FIXED */}
 
         {/* Services */}
         <Route path="/services/graphic" element={<GraphicDesign />} />
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/services/domain" element={<DomainHosting />} />
         <Route path="/services/seo" element={<SEOService />} />
       </Routes>
+
       <Footer />
     </Router>
   );

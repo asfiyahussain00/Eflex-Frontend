@@ -45,10 +45,13 @@ export default function Navbar() {
           )}
         </div>
 
+       
         <Link to="/Teampage" onClick={() => setMenuOpen(false)}>Team</Link>
+         <Link to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</Link>
         <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
     </nav>
   );
 }
+
