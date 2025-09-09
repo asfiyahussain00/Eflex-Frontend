@@ -5,7 +5,7 @@
 
 /* HERO SECTION */
 .hero {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -351,7 +351,6 @@
 
 
 /* REVIEWS */
-/* ---------------- REVIEWS ---------------- */
 .reviews {
   padding: 60px 20px 100px; 
   text-align: center;
@@ -498,5 +497,59 @@
   .review-header div {
     margin-top: 8px;
   }
- 
+  .stat-card{
+    margin: auto;
+  }
+}
+@media (max-width: 380px) {
+  /* Fix grid forcing overflow */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .about-content h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .about-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .about-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .stat-card {
+    width: 90%;
+    padding: 1rem;
+    min-width: auto;
+  }
+
+  .counter {
+    font-size: 1.8rem;
+  }
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .about-card-content {
+    text-align: center;
+  }
+
+  
+  .about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .about-content h2::after{
+    display: none;
+  }
 }
