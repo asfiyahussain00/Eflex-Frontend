@@ -26,19 +26,13 @@ export default function Footer() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/about">About us</a>
+              <a href="/BlogPage">Blog</a>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <a href="/TeamPage">Team</a>
             </li>
             <li>
-              <a href="/team">Team</a>
-            </li>
-            <li>
-              <a href="/contact">Contact us</a>
-            </li>
-            <li>
-              <a href="/portfolio">Portfolio</a>
+              <a href="/Contact">Contact us</a>
             </li>
           </ul>
         </div>
@@ -52,21 +46,21 @@ export default function Footer() {
           </div>
           <div className="footer-socials">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100092502737111"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="/icons/facebook.png" alt="Facebook" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/eflex-solution/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="/icons/linkedin1.png" alt="LinkedIn" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/eflexsolution.11/"
               target="_blank"
               rel="noopener noreferrer"
             >
