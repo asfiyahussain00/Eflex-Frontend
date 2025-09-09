@@ -6,7 +6,7 @@
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -15,19 +15,22 @@
 .footer-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-logo {
   width: 120px;
   margin-bottom: 15px;
+  display: block;
 }
 
-
+/* Footer Titles */
 .footer-title {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .footer-title::after {
@@ -36,16 +39,17 @@
   left: 0;
   bottom: -3px;
   height: 3px;
-  width: 0;
+  width: 15%;
   background: #00c9ff;
   animation: underline 2s infinite alternate ease-in-out;
 }
 
 @keyframes underline {
   from { width: 10%; }
-  to { width: 30%; }
+  to { width: 35%; }
 }
 
+/* Links */
 .footer a {
   color: #bbb;
   text-decoration: none;
@@ -55,50 +59,57 @@
   color: #00c9ff;
 }
 
+/* Newsletter */
 .newsletter {
   display: flex;
   margin-top: 10px;
 }
 .newsletter input {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 6px 0 0 6px;
   flex: 1;
+  font-size: 0.95rem;
 }
 .newsletter button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   background: #00c9ff;
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
 }
 .newsletter button:hover {
   background: #008bb5;
+  transform: translateY(-2px);
 }
 
+/* Socials */
 .footer-socials {
-  margin-top: 15px;
+  margin-top: 18px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .footer-socials a {
-  /* background: white; */
   color: white;
   padding: 10px;
   border-radius: 50%;
   font-size: 1.2rem;
-  transition: transform 0.3s;
-}
-
-.footer-socials img{
-  width: 30px;
+  transition: transform 0.3s, background 0.3s;
 }
 .footer-socials a:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+}
+.footer-socials img {
+  width: 28px;
+  height: 28px;
 }
 
+/* Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
@@ -106,18 +117,128 @@
   color: #aaa;
 }
 
-/* Responsive */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 25px;
   }
+
+  /* ✅ Center the logo */
+  .footer-logo {
+    margin: 0 auto 15px auto;
+  }
+
+  /* ✅ Align text/links to start */
+  .footer-section {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  /* ✅ Newsletter narrower + centered */
   .newsletter {
     flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
   .newsletter input,
   .newsletter button {
+    width: 70%;  /* reduced width for better centering */
     border-radius: 6px;
-    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* ✅ Socials always centered */
+  .footer-socials {
+    justify-content: center;
+  }
+
+  /* ✅ Wider underline animation */
+  .footer-title::after {
+    width: 35%;
+    animation: underlineMobile 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes underlineMobile {
+    from { width: 30%; }
+    to { width: 80%; }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 15px;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+
+  .newsletter input,
+  .newsletter button {
+    width: 85%;
+  }
+
+  .footer-title::after {
+    width: 40%;
+    animation: underlineMobileSmall 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes underlineMobileSmall {
+    from { width: 35%; }
+    to { width: 90%; }
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .about-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 90%;
+    min-width: unset; 
+    padding: 1rem;
+  }
+
+  .counter {
+    font-size: 1.6rem; 
+  }
+
+  .stat-card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .about-stats {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 100%;              
+    min-width: unset;        
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .counter {
+    font-size: 1.8rem;       
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
   }
 }
