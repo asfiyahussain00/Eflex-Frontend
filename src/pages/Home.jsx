@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./Home.css";
 
@@ -7,8 +7,8 @@ export default function Home() {
 
   const aboutRef = useRef(null);
   const aboutInView = useInView(aboutRef, {
-    amount: 0.5,
-    margin: "0px 0px -10% 0px",
+    amount: 0.2, 
+    margin: "0px 0px -5% 0px",
   });
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Home() {
     if (prefersReducedMotion) {
       counters.forEach((c) => {
         const target = +c.getAttribute("data-target");
-        c.textContent = `${target}+`;
+        c.textContent = ${target}+;
       });
       return;
     }
@@ -39,7 +39,7 @@ export default function Home() {
           if (t < 1) {
             requestAnimationFrame(tick);
           } else {
-            counter.textContent = `${target}+`;
+            counter.textContent = ${target}+;
           }
         };
         requestAnimationFrame(tick);
@@ -107,7 +107,7 @@ export default function Home() {
             <motion.button
               className="btn-primary"
               variants={heroItem}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }} 
             >
               Get Started
             </motion.button>
@@ -335,7 +335,7 @@ export default function Home() {
             >
               <div className="review-header">
                 <img
-                  src={`https://i.pravatar.cc/100?img=${idx + 5}`}
+                  src={https://i.pravatar.cc/100?img=${idx + 5}}
                   alt="Customer"
                   className="avatar"
                 />
