@@ -1,21 +1,49 @@
-import React from "react";
+
+// import "./FlipCard.css";
+
+// export default function FlipCard({ image, name, role, bio, socials }) {
+//   return (
+//     <div className="flip-card">
+//       <div className="flip-card-inner">
+//         <div className="flip-card-front">
+//           <img src={image} alt={name} className="team-img" />
+//           <h3>{name}</h3>
+//           <p>{role}</p>
+//         </div>
+
+        
+//         <div className="flip-card-back">
+//           <h3>{name}</h3>
+//           <p>{bio}</p>
+//           <div className="socials">
+//             {socials?.map((social, index) => (
+//               <a key={index} href={social.link} target="_blank" rel="noreferrer">
+//                 <img src={social.icon} alt={social.name} />
+//               </a>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 import "./FlipCard.css";
 
 export default function FlipCard({ image, name, role, bio, socials }) {
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
+        
+        {/* Front Side */}
         <div className="flip-card-front">
           <img src={image} alt={name} className="team-img" />
           <h3>{name}</h3>
           <p>{role}</p>
-        </div>
 
-        
-        <div className="flip-card-back">
-          <h3>{name}</h3>
-          <p>{bio}</p>
-          <div className="socials">
+          {/* Front ke liye alag class */}
+          <div className="socials front-socials">
             {socials?.map((social, index) => (
               <a key={index} href={social.link} target="_blank" rel="noreferrer">
                 <img src={social.icon} alt={social.name} />
@@ -23,6 +51,20 @@ export default function FlipCard({ image, name, role, bio, socials }) {
             ))}
           </div>
         </div>
+
+        {/* Back Side */}
+        <div className="flip-card-back">
+          <h3>{name}</h3>
+          <p>{bio}</p>
+          <div className="socials back-socials">
+            {socials?.map((social, index) => (
+              <a key={index} href={social.link} target="_blank" rel="noreferrer">
+                <img src={social.icon} alt={social.name} />
+              </a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );

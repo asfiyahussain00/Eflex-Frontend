@@ -5,65 +5,36 @@ import "./FlipCard.css";
 export default function TeamPage() {
   const teamMembers = [
     {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
+      image: "https://img.freepik.com/premium-vector/man-profile-cartoon_18591-58482.jpg?w=2000",
+      name: "Muhammad Wahaj",
+      role: "CEO / Founder",
+      bio: "Wahaj, the CEO / Founder of our company, is an exemplary leader known for his expertise in pixel-perfect work and effective team management. His visionary approach to projects not only ensures high-quality outcomes but also fosters a culture of innovation within our team.",
       socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
+        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com/wahajsultan" },
+        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "http://www.linkedin.com/in/wahaj-sultan-b9855b256" },
       ],
     },
     {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
+      image: "https://tse2.mm.bing.net/th/id/OIP.j4orePCXFMcYtlnNxt730AHaHa?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
+      name: "Asfiya Hussain",
+      role: "Full Stack Developer",
+      bio: "Develops and maintains both frontend and backend features, ensuring responsive UI and seamless integration with server-side logic.",
       socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
+        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com/asfiyahussain00" },
+        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://www.linkedin.com/in/asfiya-hussain-4842a7268/" },
       ],
     },
     {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
+      image: "https://thvnext.bing.com/th/id/OIP.B-UbRL9YxUDcsyUrF0P5wQHaHa?w=208&h=208&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3",
+      name: "Khadija Hussain",
+      role: "Full Stack Developer",
+      bio: "Designs scalable backend systems and dynamic frontend components while managing databases, APIs, and deployment workflows.",
       socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
+        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com/khadijahussain11" },
+        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://www.linkedin.com/in/khadija-hussain-213768366" },
       ],
     },
-    {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
-      socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
-      ],
-    },
-    {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
-      socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
-      ],
-    },
-    {
-      image: "/profile.jpg",
-      name: "Jane Smith",
-      role: "CTO",
-      bio: "Expert in cloud computing and AI-driven technologies.",
-      socials: [
-        { name: "GitHub", icon: "/icons/github.png", link: "https://github.com" },
-        { name: "LinkedIn", icon: "/icons/linkedin.png", link: "https://linkedin.com" },
-      ],
-    },
+    
   ];
 
   return (

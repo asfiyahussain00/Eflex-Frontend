@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import "./Home.css";
 
@@ -14,11 +14,10 @@ export default function Home() {
   useEffect(() => {
     if (!aboutRef.current) return;
     const counters = aboutRef.current.querySelectorAll(".counter");
-
     if (prefersReducedMotion) {
       counters.forEach((c) => {
         const target = +c.getAttribute("data-target");
-        c.textContent = `${target}+`; // ✅ fixed
+        c.textContent = `${target}+`;
       });
       return;
     }
@@ -40,7 +39,7 @@ export default function Home() {
           if (t < 1) {
             requestAnimationFrame(tick);
           } else {
-            counter.textContent = `${target}+`; // ✅ fixed
+            counter.textContent = `${target}+`;
           }
         };
         requestAnimationFrame(tick);
@@ -317,37 +316,50 @@ export default function Home() {
       </motion.section>
 
       {/* CUSTOMER REVIEWS */}
-      <motion.section
-        className="reviews"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        variants={container}
-        custom={0}
-      >
+      <motion.section className="reviews">
         <motion.h2 variants={itemUp}>Customer Reviews</motion.h2>
+
         <div className="card-grid">
-          {[1, 2, 3].map((review, idx) => (
+          {[
+            {
+              id: 1,
+              name: "Sara Khan",
+              title: "CEO, Company",
+              review:
+                "Outstanding experience with Eflex Solution. The team is highly professional, delivered my project on time, and provided great after-sales support. Truly the best service providers!",
+              image: "https://i.pravatar.cc/100?img=${idx + 5}",
+            },
+            {
+              id: 2,
+              name: "Ahmed Ali",
+              title: "HR, Company",
+              review:
+                "I am impressed with their web development expertise. They turned my ideas into a functional and modern website. Excellent communication throughout the process.",
+              image: "https://i.pravatar.cc/100?img=${idx + 8}",
+            },
+            {
+              id: 3,
+              name: "Owais Qadri",
+              title: "Owner, Zan Food",
+              review:
+                "From design to development, everything was handled smoothly. The support team is very responsive and helpful. One of the best service companies I’ve worked with.",
+              image: "https://i.pravatar.cc/100?img=${idx + 7}",
+            },
+          ].map((review, idx) => (
             <motion.div
-              key={idx}
+              key={review.id}
               className="card will-animate"
               variants={itemUp}
               whileHover={{ y: -6 }}
             >
               <div className="review-header">
-                <img
-                  src={`https://i.pravatar.cc/100?img=${idx + 5}`} // ✅ fixed
-                  alt="Customer"
-                  className="avatar"
-                />
+                <img src={review.image} alt={review.name} className="avatar" />
                 <div>
-                  <h3>Customer {idx + 1}</h3>
-                  <p>CEO, Company</p>
+                  <h3>{review.name}</h3>
+                  <p>{review.title}</p>
                 </div>
               </div>
-              <p>
-                “Amazing service and excellent support. Highly recommended!”
-              </p>
+              <p>“{review.review}”</p>
               <div className="stars">★★★★★</div>
             </motion.div>
           ))}

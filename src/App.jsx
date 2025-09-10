@@ -14,7 +14,8 @@ import DomainHosting from "./pages/Services/DomainHosting";
 import SEOService from "./pages/Services/SEOService";
 import BlogPage from "./pages/BlogPage";
 
-import './App.css';
+import "./App.css";
+
 
 export default function App() {
   return (
