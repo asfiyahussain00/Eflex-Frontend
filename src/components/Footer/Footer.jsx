@@ -1,13 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
+import logo from "../../assets/logo.png"; // ✅ apna logo path yahan lagao
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <img src="/logo.jpg" alt="E-Flex Solution" className="footer-logo" />
-        {/* -------- Logo & Office Info -------- */}
+        <img src={logo} alt="E-Flex Solution" className="footer-logo" />
+
+        {/* -------- Office Info -------- */}
         <div className="footer-section">
           <h3 className="footer-title">Office</h3>
           <p>Gulshan-e-Iqbal Block 10-A Pakistan, PK</p>
@@ -22,49 +24,43 @@ export default function Footer() {
         <div className="footer-section">
           <h3 className="footer-title">Links</h3>
           <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/BlogPage">Blog</a>
-            </li>
-            <li>
-              <a href="/TeamPage">Team</a>
-            </li>
-            <li>
-              <a href="/Contact">Contact us</a>
-            </li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/teampage">Team</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
-        {/* -------- Newsletter -------- */}
+        {/* -------- Newsletter & Socials -------- */}
         <div className="footer-section">
           <h3 className="footer-title">NewsLetter</h3>
           <div className="newsletter">
             <input type="email" placeholder="Enter Your Email" />
             <button>→</button>
           </div>
+
           <div className="footer-socials">
             <a
               href="https://www.facebook.com/profile.php?id=100092502737111"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/icons/facebook.png" alt="Facebook" />
+              <FaFacebookF />
             </a>
             <a
               href="https://www.linkedin.com/company/eflex-solution/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/icons/linkedin1.png" alt="LinkedIn" />
+              <FaLinkedinIn />
             </a>
             <a
               href="https://www.instagram.com/eflexsolution.11/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/icons/instagram.png" alt="Instagram" />
+              <FaInstagram />
             </a>
           </div>
         </div>
